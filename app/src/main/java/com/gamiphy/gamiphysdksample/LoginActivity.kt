@@ -15,9 +15,9 @@ class LoginActivity : AppCompatActivity() {
 
         GamiBot.getInstance().login(
             User(
-                "riyadyhia@gmail.com", "Riyad Yahya",
+                "ahmad.alstaty@gamiphy.co", "Ahmad Alstaty",
                 HashUtil.createHmacKey(
-                    "riyadyhia@gmail.com|Riyad Yahya",
+                    "ahmad.alstaty@gamiphy.co|Ahmad Alstaty",
                     "e71f524cee7995766626bd40350d883d14ded66dc095a3b89fb71b89faa751ce"
                 )
             )
