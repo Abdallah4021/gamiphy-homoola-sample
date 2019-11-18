@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val adjustNumberOfShipmentsBtn = findViewById<Button>(R.id.adjustNumberOfShipments)
         val givePontsPerTransationBtn = findViewById<Button>(R.id.givePontsPerTransationBtn)
         val pointsPerTruckQualityBtn = findViewById<Button>(R.id.pointsPerTruckQuality)
+        val acceptOfferBtn = findViewById<Button>(R.id.acceptOfferButton)
         val gamiBot = GamiBot.getInstance()
 
         GamiBot.getInstance().registerGamiphyOnAuthTrigger(object : OnAuthTrigger {
@@ -50,9 +51,9 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        button.setOnClickListener {
-            GamiBot.getInstance().markTaskDoneSdk("acceptOfferEvent")
-        }
+//        button.setOnClickListener {
+//            GamiBot.getInstance().markTaskDoneSdk("acceptOfferEvent")
+//        }
 
         updateProfileBtn.setOnClickListener {
             GamiBot.getInstance().markTaskDoneSdk("updateProfileEvent")
@@ -69,6 +70,10 @@ class MainActivity : AppCompatActivity() {
 
         pointsPerTruckQualityBtn.setOnClickListener {
             GamiBot.getInstance().markTaskDoneSdk("pointsPerTruckQualityEvent")
+        }
+
+        acceptOfferBtn.setOnClickListener {
+            GamiBot.getInstance().markTaskDoneSdk("acceptOfferEvent", 1)
         }
     }
 }
